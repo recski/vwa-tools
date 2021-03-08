@@ -1,5 +1,4 @@
-# VWA tools
-
+# vwa-tools
 
 ## Preprocessing
 
