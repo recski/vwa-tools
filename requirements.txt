@@ -1,0 +1,5 @@
+langdetect
+mrjob
+spacy
+stanza
+tqdm

@@ -1,5 +1,14 @@
 # vwa-tools
 
+## Requirements
+Install required python packages:
+
+```
+pip install -r requirements.txt
+```
+
+
+
 ## Preprocessing
 
 Original CSV data can be split into chunks of 1000 essays each using this command:
@@ -33,3 +42,17 @@ available cores for a local map-reduce job (temporarily creating files for a had
 job, which includes duplicating the input data). Using different runners it can
 also be run using e.g. Spark or Amazon EMR, see [this
 document](https://mrjob.readthedocs.io/en/latest/guides/runners.html) for details.
+
+
+## Word count by PLZ
+
+This word count can be aggregated by PLZ-s like this:
+
+```
+cat data/essays_word_count_by_skz_sorted.tsv | python counts_to_plz.py data/skz_to_address_postcode.csv > data/essays_word_count_by_plz_sorted.tsv
+```
+
+This will also print to stderr the SKZ codes missing from the map:
+```
+unknown SKZs: 304056,1100006,205046,922706,1132235,1132236,1132211,1132210
+```
