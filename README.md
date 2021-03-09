@@ -56,7 +56,10 @@ unknown SKZs: 304056,1100006,205046,922706,1132235,1132236,1132211,1132210
 ```
 
 
-## simple stats
+## Languages
+
+The `langdetect` package was used to determine the primary language of each
+document. Remaining stats are calculated for German essays only.
 
 Language distribution (based on ~10% of essays):
 
@@ -69,12 +72,12 @@ Language distribution (based on ~10% of essays):
 - ca: 1
 
 
-Stats on German essays (based on ~10%):
+## Corpus stats on German essays:
 
 - Corpus size: 655M tokens (of which standard punctuation: 79M, rest: 576M)
 - Vocabulary: 8.7M
-- Avg. tokens / document: 6703.45
-- Avg. sentences / doc:, 504.96
+- Avg. tokens / document : 6703
+- Avg. sentences / doc: 505
 
 
 ## Vocabulary
