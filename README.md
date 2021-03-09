@@ -9,9 +9,10 @@ pip install -r requirements.txt
 
 ## Preprocessing
 
-Original CSV data can be split into chunks of 1000 essays each using this command:
+Original CSV data can be split into chunks of 1000 essays each using this command (assuming it is available in a directory called `data`):
 
 ```
+mkdir data/essays
 python split_csv.py data/essays.csv 1000 data/essays/essays
 ```
 
