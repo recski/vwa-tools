@@ -7,8 +7,6 @@ Install required python packages:
 pip install -r requirements.txt
 ```
 
-
-
 ## Preprocessing
 
 Original CSV data can be split into chunks of 1000 essays each using this command:
@@ -56,3 +54,37 @@ This will also print to stderr the SKZ codes missing from the map:
 ```
 unknown SKZs: 304056,1100006,205046,922706,1132235,1132236,1132211,1132210
 ```
+
+
+## simple stats
+
+Language distribution (based on ~10% of essays):
+
+- de: 9628
+- en: 363
+- cs: 4
+- sk: 2
+- it: 1
+- el: 1
+- ca: 1
+
+
+Stats on German essays (based on ~10%):
+
+- Corpus size: 655M tokens (of which standard punctuation: 79M, rest: 576M)
+- Vocabulary: 8.7M
+- Avg. tokens / document: 6703.45
+- Avg. sentences / doc:, 504.96
+
+
+## Vocabulary
+
+- raw: 8.7M
+- letters-only strings only: 3.8M, coverage of all tokens (without standard
+  punct): 85.9%
+- **letters-only with at least 10 occurrences: 593K, coverage: 84.7%**
+
+
+
+
+
