@@ -1,5 +1,8 @@
 langdetect
 mrjob
+nltk
+sklearn
 spacy
 stanza
 tqdm
+wordcloud
