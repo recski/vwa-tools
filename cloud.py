@@ -13,12 +13,12 @@ from tuw_nlp.common.vocabulary import Vocabulary
 from common import EXTRA_STOPWORDS
 
 
-PLZ = [
-    "1010", "1020", "1100", "1210"]
 # PLZ = [
-#    "1020", "1030", "1040", "1050", "1060", "1070", "1080", "1090", "1100",
-#    "1110", "1120", "1130", "1140", "1150", "1160", "1170", "1180", "1190",
-#    "1200", "1210", "1220", "1230"]
+#     "1010", "1020", "1100", "1210"]
+PLZ = [
+    "1020", "1030", "1040", "1050", "1060", "1070", "1080", "1090", "1100",
+    "1110", "1120", "1130", "1140", "1150", "1160", "1170", "1180", "1190",
+    "1200", "1210", "1220", "1230"]
 
 
 SW = set(stopwords.words('german'))
@@ -107,7 +107,7 @@ def generate_wordclouds(count_by_plz):
 
 
 def get_words(text, nlp):
-    return [w.text for w in nlp(text)]
+    return [w.lemma_ for w in nlp(text)]
 
 
 def from_json(stream, field='text'):
@@ -145,6 +145,7 @@ def filter_count(count):
 
 def main():
     # count_by_plz, vocab = get_counts(sys.stdin)
+
     # count = from_json(sys.stdin, field='title')
     # print_count(count, sys.argv[2])
     # count = filter_count(count)
