@@ -11,8 +11,6 @@ from sklearn.decomposition import LatentDirichletAllocation
 def get_args():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument("-m", "--model-file", type=str)
-    parser.add_argument(
-        "-p", "--print-errs", default=False, action='store_true')
     parser.add_argument("-c", "--corpus-file", default=None, type=str)
     # parser.add_argument("-v", "--vocab-file", default=None, type=str)
     parser.add_argument("-n", "--n-topics", default=None, type=int)

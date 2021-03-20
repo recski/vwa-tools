@@ -5,12 +5,11 @@ from collections import defaultdict
 import numpy as np
 import spacy
 from wordcloud import WordCloud
-from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfTransformer
 from scipy.stats import entropy
 from tuw_nlp.common.vocabulary import Vocabulary
 
-from common import EXTRA_STOPWORDS
+from common import STOPWORDS as SW
 
 
 # PLZ = [
@@ -20,10 +19,6 @@ PLZ = [
     "1110", "1120", "1130", "1140", "1150", "1160", "1170", "1180", "1190",
     "1200", "1210", "1220", "1230"]
 
-
-SW = set(stopwords.words('german'))
-
-SW |= EXTRA_STOPWORDS
 
 TFIDF = False
 

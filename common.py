@@ -1,3 +1,4 @@
+from nltk.corpus import stopwords
 
 EXTRA_STOPWORDS = {
     'the',
@@ -9,3 +10,7 @@ EXTRA_STOPWORDS = {
     'berücksichtigung', 'veränderung', 'folge', 'analyse', 'anwendung',
     'verwendung', 'unterschied', 'aspekt', 'bezug', 'wirkung', 'rolle',
 }
+
+STOPWORDS = set(stopwords.words('german'))
+
+# STOPWORDS |= EXTRA_STOPWORDS
