@@ -98,10 +98,11 @@ Language distribution (based on ~10% of essays):
 pv data/essays/ana/essays_*.jsonl | python to_bow.py data/essays_vocab_min10.txt data/essays_bow_min10.npz
 ```
 
-- training LDA model after simple vocabulary filtering (see `filter_vocab.py`):
+- training LDA model after simple vocabulary filtering (see `filter_vocab.py`)
+  for 25 topics using 40 workers:
 
 ```
-python lda_train.py -c data/essays_bow_min10.npz -m models/essays_filtered_max100k_lda_10 -v data/essays_vocab_min10.txt -w data/essays_vocab_filtered_max100k.txt  -n 10 -j 40
+python lda_train.py -c data/essays_bow_min10.npz -m models/essays_filtered_max100k_lda_25 -v data/essays_vocab_min10.txt -w data/essays_vocab_filtered_max100k.txt  -n 25 -j 40
 ```
 
 This will also save the filtered vocabulary for subsequent analysis
@@ -109,6 +110,6 @@ This will also save the filtered vocabulary for subsequent analysis
 - printing top words of each topic (to `topics.png`):
 
 ```
-python lda_test.py -m models/essays_filtered_max100k_lda_10 -n 10 -v data/essays_vocab_filtered_max100k.txt
+python lda_test.py -m models/essays_filtered_max100k_lda_25 -v data/essays_vocab_filtered_max100k.txt
 ```
 

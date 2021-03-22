@@ -11,7 +11,7 @@ from tuw_nlp.common.vocabulary import Vocabulary
 
 def plot_top_words(model, feature_names, n_top_words, title, fn):
     """https://scikit-learn.org/stable/auto_examples/applications/plot_topics_extraction_with_nmf_lda.html#sphx-glr-auto-examples-applications-plot-topics-extraction-with-nmf-lda-py"""  # noqa
-    fig, axes = plt.subplots(2, 5, figsize=(30, 15), sharex=True)
+    fig, axes = plt.subplots(5, 5, figsize=(40, 20), sharex=True)
     axes = axes.flatten()
     for topic_idx, topic in enumerate(model.components_):
         top_features_ind = topic.argsort()[:-n_top_words - 1:-1]
@@ -37,10 +37,7 @@ def plot_top_words(model, feature_names, n_top_words, title, fn):
 def get_args():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument("-m", "--model-file", type=str)
-    # parser.add_argument("-c", "--corpus-file", default=None, type=str)
     parser.add_argument("-v", "--vocab-file", default=None, type=str)
-    parser.add_argument("-n", "--n-topics", default=None, type=int)
-    # parser.add_argument("-w", "--n-workers", default=None, type=int)
     return parser.parse_args()
 
 
